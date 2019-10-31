@@ -1,4 +1,4 @@
-var test_function=require('../basicCalculator.js');
+var test_function=require('../src/basicCalculator.js');
    
 describe("function for adding",function() {       
        it("add two number and return", function(){
@@ -11,7 +11,7 @@ describe("function for adding",function() {
 
   describe("function that add a bunch of numbers",function(){
       it("function for adding many number", function(){
-          expect(test_function.addBunchOfNumbers(1,2,3,4)).toEqual(10);
+          expect(test_function.addBunchOfNumbers(1,2,3,4)).not.toEqual();
 
       });
   });
