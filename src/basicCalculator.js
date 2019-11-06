@@ -1,11 +1,7 @@
-function add(a,b){
-    return a+b ;
-
-}
 
 
     
-function addBunchOfNumbers(){
+function add(){
     var sum = 0;
     for( var i=0; i < arguments.length; i++){
             sum = sum + arguments[i];
@@ -15,24 +11,17 @@ function addBunchOfNumbers(){
 
 
 
-function multiply(a,b){
-    return a*b ;
-
-}
-
-
-
-function multiplyBunchOfNumbers(){
-    var sum = 0;
+function multiply(){
+    var product = 1;
     for( var i=0; i < arguments.length; i++){
-            sum = sum * arguments[i];
-        }return sum;
+            product = product * arguments[i];
+        }return product;
 
 }
 
 
 
 module.exports={
-    add,addBunchOfNumbers,multiply,multiplyBunchOfNumbers
+    add,multiply
 
 }
