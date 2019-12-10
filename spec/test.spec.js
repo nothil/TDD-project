@@ -36,13 +36,7 @@ describe("function for adding",function() {
 
         
   
-         //testing all functions
-        console.log(calculator_instance.add(1,2,3,4));
-        console.log(calculator_instance.multiply(1,2));
-         
-        console.log(calculator_instance.add("LAST", 10));
-        console.log(calculator_instance.add("SLOT_1",5));
-        console.log(calculator_instance.multiply("SLOT_2", 2));
+        
 
     
    

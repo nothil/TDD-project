@@ -12,14 +12,14 @@ module.exports = class calculator {
 
 
     add(){
-       // console.log("starting...");
+    
         let sum = 0;
-       // console.log("initialised sum ");
+       
         for( var i=0; i < arguments.length; i++){
-            //console.log(" ....... " + i);
+            
             if(arguments[i] === "LAST"){
                 arguments[i] = this.last_value;
-               // sum = sum + arguments[i];
+               sum = sum + arguments[i];
             };
             if(arguments[i] === "SLOT_1"){
                 arguments[i] = this.get_slot(1);
@@ -44,7 +44,7 @@ module.exports = class calculator {
         for( var i=0; i < arguments.length; i++){
             if(arguments[i] === "LAST"){
                 arguments[i] = this.last_value;
-                //product = product * arguments[i];
+                product = product * arguments[i];
             };
 
             if(arguments[i] === "SLOT_2"){
@@ -59,7 +59,7 @@ module.exports = class calculator {
 
             this.map.set("MULTIPLY_SLOT", product);
 
-            // this.map.set("MULTILY_SLOT", product);
+             this.map.set("MULTILY_SLOT", product);
         }return product;
       
         };
