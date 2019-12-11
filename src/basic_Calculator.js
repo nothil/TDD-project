@@ -22,7 +22,7 @@ module.exports = class calculator {
                sum = sum + arguments[i];
             };
             if(arguments[i] === "SLOT_1"){
-                arguments[i] = this.get_slot(1);
+                //arguments[i] = this.get_slot(1);
 
             };
 

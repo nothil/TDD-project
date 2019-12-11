@@ -26,11 +26,20 @@ describe("function for adding",function() {
       
          
        it('should take the last value and add 5', function() {
-        calculator_instance.map.set("SLOT_1", 3);
+        calculator_instance.map.add("last", 3);
          calculator_instance.multiply(1,3);
            expect(calculator_instance.add( calculator_instance.map.get("MULTIPLY_SLOT")  ,5)).toEqual(8);
 
+
+
       });
+
+      it("should take slot",function(){
+        expect(calculator_instance.map.add("SLOT_1", 3).toEqual(11));
+         
+      });
+
+
 
    });
 
