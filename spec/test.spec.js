@@ -1,4 +1,4 @@
-var calculator=require('../src/basicCalculator.js');
+var calculator=require('../src/basic_Calculator.js');
 
 let calculator_instance = new calculator;
    
@@ -11,32 +11,37 @@ describe("function for adding",function() {
       expect(calculator_instance.add(1,2,3,4)).toEqual(10);
             });
 
-   it("multyply two number and return", function(){
-      expect(calculator_instance.multiply(1,2,3,4)).toEqual(24);
-    });
+   it("should return last result", function(){
+      calculator_instance.add(1,2);
+      expect(calculator_instance.last()).toEqual(3);
+   }); 
 
-   it("multyply two number and return", function(){
-      expect(calculator_instance.multiply(1,2)).toEqual(2);
-         });
-
-         it("should give the sane answer for multiplication and get slot", function() {
-            expect(calculator_instance.multiply(1, 2)).toEqual(2);
-            expect(calculator_instance.get_slot());
-             });
-      
-         
-       it('should take the last value and add 5', function() {
-        calculator_instance.map.add("last", 3);
-         calculator_instance.multiply(1,3);
-           expect(calculator_instance.add( calculator_instance.map.get("MULTIPLY_SLOT")  ,5)).toEqual(8);
+   it("should multiply two numbers", function(){
+      calculator_instance.multiply(3,5);
+      expect(calculator_instance.last()).toEqual(15)
 
 
+   });
 
+
+   it("should allow last as a paremeter", function(){
+      calculator_instance.add(1,2);
+      expect(calculator_instance.add("LAST", 5)).toEqual(8)
+   });
+   
+    
+      it("should return  ",function(){
+         calculator_instance.add(1, 2);
+         calculator_instance.set_slot(1);
+         expect(calculator_instance.get_slot(1)).toEqual(3);
+        
+    
       });
 
-      it("should take slot",function(){
-        expect(calculator_instance.map.add("SLOT_1", 3).toEqual(11));
-         
+      it("should allow memory slot as a paremeter", function(){
+         calculator_instance.add("LAST", 10);
+         calculator_instance.add("SLOT_1,", 5);
+         calculator_instance.multiply("SLOT_2", 2);
       });
 
 
